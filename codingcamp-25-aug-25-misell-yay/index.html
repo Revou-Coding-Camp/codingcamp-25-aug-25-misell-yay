@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <!-- Header Content -->
+    <header class="main-header py-[8px] px-[4px]">
+        <!-- Icon dan Nama Company -->
+        <div class="flex items-center gap-[12px]">
+            <div class="logo"></div>
+            <span class="text-white text-[20px] font-bold">Misell Company</span>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="flex">
+            <a href="#home-page" class="border p-[4px]">Home</a>
+            <a href="#our-profile" class="border p-[4px]">Our Profile</a>
+            <a href="#message-us" class="border p-[4px]">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Home -->
+        <section id="home-page" class="min-h-[500px] section-fade">
+            <header>
+                <h2 class="text-center text-[24px] font-bold py-[16px]">
+                    Hi <span id="username"></span>! Welcome to Our Website
+                </h2>
+            </header>
+
+            <p class="text-center px-[24px]">
+                We are a team of dedicated professionals committed to delivering high-quality services to our clients.
+            </p>
+
+            <div class="flex justify-center py-[16px]">
+                <img src="https://picsum.photos/1200/300" alt="Company Banner" class="w-full max-w-[1200px] h-[300px] object-cover rounded-[24px]" style="border:2px solid black;">
+            </div>
+        </section>    
+        <hr />
+
+        <!-- Our Profile -->
+        <section id="our-profile" class="min-h-[500px] section-fade">
+            <header>
+                <h2 class="text-center text-[24px] font-bold py-[16px]">
+                    Our Profile
+                </h2>
+            </header>
+        </br>
+
+            <!-- Profile Description -->
+            <p class="text-center">
+                Our company was founded in 2020 with the mission to provide innovative solutions to our clients. <br>
+                We specialize in web development, digital marketing, and graphic design. Our team consists of experienced professionals who are passionate about their work and dedicated to achieving excellence.
+                We believe in building long-term relationships with our clients based on trust, transparency, and mutual respect. Our goal is to help our clients succeed in their business by providing them with the best possible services and solutions.
+            </p>   
+        </br>
+
+            <!-- Vision & Mission -->
+            <p class="text-center px-[24px]">
+                Our vision is to be a leading company in the industry, recognized for our innovative solutions and exceptional services. <br>
+                We aim to create value for our clients by helping them achieve their business goals and objectives. Our mission is to provide high-quality services that exceed our clients' expectations, while maintaining a strong commitment to integrity, professionalism, and customer satisfaction. We strive to create a positive impact on the communities we serve by promoting sustainable practices and social responsibility. We are dedicated to continuous improvement and innovation, and we believe that our success is directly tied to the success of our clients.
+            </p>    
+            </br>
+
+            <!-- Team Members -->
+            <div class="flex justify-center py-[16px] gap-[24px]">
+                <div class="flex flex-col items-center">
+                    <img src="https://picsum.photos/200" alt="Team Photo" class="w-[200px] h-[200px] object-cover rounded-full" />
+                    <span><b>Our Team</b></span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://picsum.photos/200" alt="Team Photo" class="w-[200px] h-[200px] object-cover rounded-full" />
+                    <span><b>Our Team</b></span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://picsum.photos/200" alt="Team Photo" class="w-[200px] h-[200px] object-cover rounded-full" />
+                    <span><b>Our Team</b></span>
+                </div>
+            </div>
+
+
+        </section>
+
+        <hr />
+
+        <!-- Message Us -->
+        <section id="message-us" class="min-h-[500px] section-fade">
+            <header>
+                <h2 class="text-center text-[24px] font-bold py-[16px]">
+                    Message Us
+                </h2>
+            </header>
+
+            <div class="flex gap-[24px] items-start">
+                <!-- Form hanya setengah layar -->
+                <form class="px-[16px] w-1/2" id="user-form">
+                    <label for="name-input" class="block py-[8px]">
+                        Name:
+                        <input type="text" id="name-input" class="border p-[4px] w-full" required>
+                    </label>
+
+                    <label for="email-input" class="block py-[8px]">
+                        Email:
+                        <input type="email" id="email-input" class="border p-[4px] w-full" required>
+                    </label>
+
+                    <label for="birth-input" class="block py-[8px]">
+                        Date of Birth:
+                        <input type="date" id="birth-input" class="border p-[4px] w-full" required>
+                    </label>
+
+                    <!-- Jenis Kelamin (Radio) -->
+                    <label class="block py-[8px]">
+                        Gender:
+                        <span class="flex gap-[16px]">
+                            <label>
+                                <input type="radio" name="gender" value="male" required>Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female" required>Female
+                            </label>
+                        </span>
+                    </label>
+
+                    <button type="button" onclick="displayFormResult();" class="border p-[4px] mt-[8px]">Send Message</button>
+                </form>
+
+                <!-- Form result di sisi kanan -->
+                <div id="form-result" class="border p-[16px] w-1/2 min-h-[100px] bg-white"><center><b>Your Message</b></center></div>
+            </div>
+        </section>
+
+    </main>
+
+    <hr />
+
+    <!-- Footer Content -->
+    <footer class="text-center">
+        <p>&copy; 2025 Misell Company.</p>
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

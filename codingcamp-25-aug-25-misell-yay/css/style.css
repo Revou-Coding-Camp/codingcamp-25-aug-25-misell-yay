@@ -1,0 +1,51 @@
+.logo {
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* menu utama */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: maroon;
+}
+
+/* navbar */
+html {
+    scroll-behavior: smooth;
+}
+
+.border {
+    border-style: var(--border-style, solid);
+    border-width: 2px;
+    border-radius: 25px;
+    background-color: white;
+    margin: 0 4px;
+}
+
+p {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+hr {
+    border: none;
+    border-top: 4px solid maroon;
+    margin: 16px 0;
+}
+
+.section-fade {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.section-fade.active {
+    opacity: 1;
+}
+
